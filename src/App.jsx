@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Dice from "./assets/images/icon-dice.svg";
+import Divider from "./assets/images/pattern-divider-desktop.svg"
 
 import "./App.scss";
 
@@ -17,14 +19,32 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="card">
+      <main className="card">
         <h4 className="advice-id">ADVICE #{adviceId}</h4>
         <h1 className="advice">{`"${advice}"`}</h1>
-        <img className="divider" src="./assets/images/pattern-divider-desktop.svg" alt="divider" />
+        <img
+          className="divider"
+          src={Divider}
+          alt=""
+        />
         <button className="button" onClick={() => window.location.reload()}>
-          <img src="./assets/images/icon-dice.svg" alt="dice" />
+          <img src={Dice} alt="" />
         </button>
-      </div>
+      </main>
+
+      <footer>
+        <p>
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://github.com/Ola-rotimi">Olarotimi</a>.
+        </p>
+      </footer>
     </div>
   );
 };
